@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spaghetti Cat - $SPACATTI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Neue', sans-serif;
+      background: linear-gradient(135deg, #ffe5b4 0%, #ffcc99 100%);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #ff9966;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+      animation: slideDown 1s ease-out;
+    }
+
+    nav {
+      margin-top: 1em;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    nav a:hover {
+      transform: scale(1.2);
+    }
+
+    section {
+      padding: 2em 1em;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .fun-img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .copy-container {
+      cursor: pointer;
+      display: inline-block;
+      background: #fff;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    .copy-container:hover {
+      background: #ffe0cc;
+    }
+
+    #contract-value {
+      font-size: 0.8em;
+    }
+
+    footer {
+      background: #ff9966;
+      text-align: center;
+      padding: 1em;
+      color: white;
+      font-size: 0.8em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+  <script>
+    function copyToClipboard() {
+      const text = document.getElementById('contract-value').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard!');
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🍝 Spaghetti Cat Coin - $SPACATTI</h1>
+    <p>The meme coin the internet's been waiting for!</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#contract">Contract</a>
+      <a href="#buy">How to Buy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>😺 Who is Spaghetti Cat?</h2>
+    <p>Once upon a time, in a viral moment that transcended time and space, the internet was introduced to an unlikely hero: Spaghetti Cat. This plucky little cat, caught in the most random and unexpected moment on a TV screen, won the hearts of millions with one simple, unforgettable image.</p>
+    <img class="fun-img" src="https://res.cloudinary.com/ddaksusvu/image/upload/v1747059873/spacatti_ai_s7oqav.png" alt="Spaghetti Cat" />
+  </section>
+
+  <section id="tokenomics">
+    <h2>💰 Tokenomics</h2>
+    <ul>
+      <li>Supply: 1,000,000,000 $SPACATTI</li>
+      <li>LP Burned 🔥</li>
+      <li>Community Owned and Driven 💯</li>
+    </ul>
+  </section>
+
+  <section id="contract">
+    <h2>📄 Contract</h2>
+    <div class="copy-container" onclick="copyToClipboard()">
+      <span id="contract-value">2CpQ2Y8ihVLxy88tP359XcQgG3ELJCRX24nectDRqmF4</span>
+    </div>
+  </section>
+
+  <section id="buy">
+    <h2>🛒 How to Buy</h2>
+    <p>1. Grab SOL with your Phantom Wallet 🧙‍♂️</p>
+    <p>2. Go to Raydium or Jupiter 🚀</p>
+    <p>3. Swap for $SPACATTI 🍝</p>
+    <p>4. HODL till SPACATTI breaks the charts! 📈</p>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Join the Memevolution</h2>
+    <p><a href="https://t.me/spacatti00">Join us on Telegram</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 $SPACATTI Coin. Powered by Spaghetti, Dreams and Proper Devs.</p>
+  </footer>
+</body>
+</html>
